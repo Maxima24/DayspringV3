@@ -25,7 +25,7 @@ const GuestPage = () => {
     getProduct();
   }, []);
 
-  if (!Guestrole) return <Navigate to={"/newuser/login"} />;
+  // if (!Guestrole) return <Navigate to={"/newuser/login"} />;
 
   const user = { name: username };
 

@@ -15,15 +15,15 @@ export const action = async ({ request }) => {
   console.log("Login Data:", data);
 
   
-    const user = await LoginUser(data);
+    // const user = await LoginUser(data);
 
-    store.dispatch(loginUser(user.data));
+    store.dispatch(data);
 
     const state = store.getState();
     const username = state.user.username;
-    const role = user.data.role;
+    const role = data.role;
 
-    localStorage.setItem("token", user?.token);
+    // localStorage.setItem("token", user?.token);
 
     console.log("Redirecting to:", `/home/${role}/${username}`);
     return redirect(`/home/${role}/${username}`);
